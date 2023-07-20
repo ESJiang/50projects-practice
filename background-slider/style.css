@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --font-family: "Roboto", sans-serif;
+    --bg-1: url("https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80");
+    --bg-2: url("https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80");
+    --bg-3: url("https://images.unsplash.com/photo-1495467033336-2effd8753d51?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80");
+    --bg-4: url("https://images.unsplash.com/photo-1522735338363-cc7313be0ae0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2689&q=80");
+    --bg-5: url("https://images.unsplash.com/photo-1559087867-ce4c91325525?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80");
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    display: flex; /*让parent_container居中*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    transition: 0.4s;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+.parent_container {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    position: relative;
+    height: 70vh;
+    width: 70vw;
+    overflow: inherit;
+}
+
+.container:first-of-type {
+    background-image: var(--bg-1);
+}
+
+.container:nth-of-type(2) {
+    background-image: var(--bg-2);
+}
+
+.container:nth-of-type(3) {
+    background-image: var(--bg-3);
+}
+
+.container:nth-of-type(4) {
+    background-image: var(--bg-4);
+}
+
+.container:last-of-type {
+    background-image: var(--bg-5);
+}
+
+.container {
+    top: -15vh;
+    left: -15vw;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-position: center center;
+    background-size: cover;
+    opacity: 0;
+    transition: 1s ease;
+}
+
+.container.active {
+    opacity: 1;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 30px;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    outline: none;
+    background-color: transparent;
+    color: whitesmoke;
+    border: 1px solid rgb(255, 165, 2);
+    cursor: pointer;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.left {
+    left: calc(15vw - 65px);
+    border-right: none;
+}
+
+.right {
+    right: calc(15vw - 65px);
+    border-left: none;
+}
+
+i {
+    pointer-events: none;
+}
+
+.btn:hover {
+    color: green;
+}
