@@ -1,0 +1,73 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.progress_section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    width: 350px;
+    position: relative;
+}
+
+.progress_section::before {
+    content: "";
+    background-color: gray;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    z-index: -1;
+}
+
+.progress_section_circle {
+    border-radius: 50%;
+    background-color: white;
+    border: 3px solid gray;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+}
+
+.progress_section_circle.active {
+    border: 5px solid blue;
+}
+
+.btn_section {
+    display: flex;
+    gap: 30px;
+}
+
+.btn_section_button {
+    border-radius: 10px;
+    color: hsl(0, 0%, 100%);
+    background-color: gray;
+    padding: 8px 30px;
+    margin: 5px;
+    cursor: not-allowed;
+}
+
+.btn_section_button.active {
+    background-color: blue;
+    cursor: pointer;
+}

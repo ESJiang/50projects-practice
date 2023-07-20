@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+:root {
+    --font-family: "Muli";
+    --panel-bg1: url("./images/1.png");
+    --panel-bg2: url("./images/2.png");
+    --panel-bg3: url("./images/3.png");
+    --panel-bg4: url("./images/4.png");
+    --panel-bg5: url("./images/5.png");
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    gap: 10px;
+    width: inherit;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    margin: 0;
+    flex: 0.5;
+    position: relative;
+    transition: all 300ms ease-in;
+}
+
+.panel:first-child {
+    background-image: var(--panel-bg1);
+    margin-left: 10px;
+}
+
+.panel:nth-child(2) {
+    background-image: var(--panel-bg2);
+}
+
+.panel:nth-child(3) {
+    background-image: var(--panel-bg3);
+}
+
+.panel:nth-child(4) {
+    background-image: var(--panel-bg4);
+}
+
+.panel:last-child {
+    background-image: var(--panel-bg5);
+    margin-right: 10px;
+}
+
+.panel > figcaption {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active > figcaption {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}

@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: rgb(116, 89, 234);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search {
+    position: relative;
+}
+
+.input,
+.btn {
+    border: none;
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+}
+
+.input {
+    font-size: 18px;
+    padding: 15px; /*take advantage of border-box when width&height are defined*/
+    transition: width 0.3s ease-in-out;
+}
+
+.btn {
+    position: absolute; /*Overlap the input field by default*/
+    font-size: 24px;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn.active {
+    transform: translateX(200px);
+}
+
+.input.active {
+    width: 200px;
+}
+
+.input:focus,
+.btn:focus {
+    outline: none;
+}
