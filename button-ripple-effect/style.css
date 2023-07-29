@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: black;
+}
+
+#my_btn {
+    overflow: hidden;
+    position: relative;
+    margin: 10px 0;
+    letter-spacing: 2px;
+    font-size: 14px;
+    text-transform: uppercase;
+    background-color: rgb(128, 0, 128);
+    color: whitesmoke;
+    padding: 20px 30px;
+    border: none;
+}
+
+#my_btn:focus {
+    outline: none;
+}
+
+#my_btn .circle {
+    position: absolute;
+    background-color: #fff;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: scale 0.5s ease-out;
+}
+
+@keyframes scale {
+    to {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}
