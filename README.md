@@ -25,3 +25,5 @@
 [button-ripple-effect](https://github.com/ESJiang/50projects-practice/tree/main/button-ripple-effect)
 
 [drag-n-drop](https://github.com/ESJiang/50projects-practice/tree/main/drag-n-drop)
+
+[verify-account-ui](https://github.com/ESJiang/50projects-practice/tree/main/verify-account-ui)
