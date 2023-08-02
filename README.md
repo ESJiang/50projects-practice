@@ -27,3 +27,5 @@
 [drag-n-drop](https://github.com/ESJiang/50projects-practice/tree/main/drag-n-drop)
 
 [verify-account-ui](https://github.com/ESJiang/50projects-practice/tree/main/verify-account-ui)
+
+[mobile-tab-navigation](https://github.com/ESJiang/50projects-practice/tree/main/mobile-tab-navigation)
